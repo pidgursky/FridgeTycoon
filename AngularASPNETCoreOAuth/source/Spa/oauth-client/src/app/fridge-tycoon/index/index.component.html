@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="!busy" class="col-md-8">
+          <h3>List of fridges</h3>
+          <a routerLink="add" class="btn btn-sm btn-success mb-2">Add Fridge</a>
+
+            <table class="table small">
+
+              <!-- "fridgeName":null,"model":null,"volume":0,"refrigeratory":0, -->
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Fridge Name</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Volume</th>
+                    <th scope="col"></th> 
+                    <th scope="col"></th> 
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let fridge of fridges; let i = index" [attr.data-index]="i">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{fridge.name}}</td>
+                    <td>{{fridge.model}}</td>        
+                    <td>{{fridge.volume}}</td>
+                    <td>     
+                      <button routerLink="addp//{{fridge.id}}" class="btn btn-sm btn-primary mr-1">Add product</button>   
+                      <button routerLink="product/{{fridge.id}}" class="btn btn-sm btn-primary mr-1">ProdList</button>
+                      <button routerLink="edit/{{fridge.id}}" class="btn btn-sm btn-primary mr-1">Edit</button>
+                      <button class="btn btn-sm btn-danger" (click)="deleteFridge(fridge.id)">
+                        <span>Delete</span>                    
+                      </button>       
+                    </td>    
+                  </tr>                 
+                </tbody>
+              </table>            
+        </div>
+    </div>
+    <ngx-spinner></ngx-spinner>  
+</div>
