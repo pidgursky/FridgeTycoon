@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FT.AuthServer.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FT.Services", "FT.Services\FT.Services.csproj", "{2EF2BB52-43F0-47AB-99FC-6F1387CF363F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FT.Tests", "FT.Tests\FT.Tests.csproj", "{C9F74F95-A8A4-44E2-8C1F-BD8A8ED45627}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FT.Tests", "FT.Tests\FT.Tests.csproj", "{C9F74F95-A8A4-44E2-8C1F-BD8A8ED45627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
